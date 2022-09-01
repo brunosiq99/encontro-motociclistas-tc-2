@@ -8,21 +8,21 @@ let currentOpenedImage = '';
 function putsImageInDayDiv() {
     // DOMINGO
     dayDiv = document.getElementById('images_domingo'); 
-    fetch(`http://127.0.0.1:5500/assets/json/${dayDiv.id}.html`).
+    fetch(`https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/${dayDiv.id}.html`).
         then((response) => {    
             createImages(response,dayDiv)
         }).
         then(()=>{
             // SÁBADO
             dayDiv = document.getElementById('images_sabado');
-            fetch(`http://127.0.0.1:5500/assets/json/${dayDiv.id}.html`).
+            fetch(`https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/${dayDiv.id}.html`).
                 then((response) => {
                     createImages(response,dayDiv)
                 }).
                 then(()=>{
                     // SEXTA
                     dayDiv = document.getElementById('images_sexta');
-                    fetch(`http://127.0.0.1:5500/assets/json/${dayDiv.id}.html`).
+                    fetch(`https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/${dayDiv.id}.html`).
                         then((response) => { 
                             createImages(response,dayDiv)
                         }).
