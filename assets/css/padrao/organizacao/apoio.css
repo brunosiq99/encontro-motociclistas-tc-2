@@ -1,0 +1,38 @@
+.apoio {
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.apoio__lista {
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 1rem 0;
+    
+}
+
+.apoio img {
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.apoio__item___diminuir img {
+    width: 70%;
+}
+
+@media screen (max-width:639px){
+    .apoio {
+        width: 70%; 
+    }
+    .apoio__item___diminuir img {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width:640px){
+    .apoio {
+        width: 20%; 
+    }
+
+}

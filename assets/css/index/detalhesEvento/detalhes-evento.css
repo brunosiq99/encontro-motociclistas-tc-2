@@ -1,0 +1,17 @@
+.detalhes-evento {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8rem;
+}
+
+.detalhes-evento h4 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 560px){
+    .detalhes-evento {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+}

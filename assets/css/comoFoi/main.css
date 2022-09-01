@@ -1,0 +1,20 @@
+main {
+    background: url(../../Img/fundo.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.main__titles{
+    font-family: 'new rocker', cursive;;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.main__subtitles{
+    font-family: 'new rocker', cursive;;
+    font-size: 1.75rem;
+    text-align: center;
+}
+.main__texts{
+    font-family: 'montserrat', sans-serif;
+    font-size: 1.25rem;
+}

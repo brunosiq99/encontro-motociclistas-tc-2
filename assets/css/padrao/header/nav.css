@@ -1,0 +1,51 @@
+.nav__lista {
+    display: flex; 
+    align-items: center;
+}
+
+.nav__item {
+    text-align: center;
+}
+
+.nav__link {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.nav__item:hover {
+    color: orange;
+}
+
+.ativo {
+    cursor:grab;
+    color: #dddddd;
+}
+
+@media screen and (min-width: 0) {
+    .nav__item {
+        margin: 0 0.375rem;
+        font-size: 1rem;
+        padding: 0.25rem;
+        border-left: 1pt #fdfdfd solid ;
+        border-right: 1pt #fdfdfd solid ;
+    }
+}
+
+@media screen and (min-width: 460px) {
+    .nav__item {
+        margin: 0 0.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .nav__item {
+        border: none;
+    }
+}
+
+
+
+
+

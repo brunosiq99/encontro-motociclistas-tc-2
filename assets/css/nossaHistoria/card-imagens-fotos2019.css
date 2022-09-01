@@ -1,0 +1,30 @@
+.card__imagens___foto-2019-1 {
+    background: url(./../../Img/lecambada2019.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card__imagens___foto-2019-2 {
+    background: url(../../Img/2019/foto2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card__imagens___foto-2019-3 {
+    background: url(../../Img/2019/foto3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card__imagens___foto-2019-4 {
+    background: url(../../Img/2019/foto4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card__imagens___foto-2019-5 {
+    background: url(../../Img/foto-aerea-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card__imagens___foto-2019-6 {
+    background: url(../../Img/2019/foto5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

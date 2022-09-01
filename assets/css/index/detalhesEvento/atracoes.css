@@ -1,0 +1,33 @@
+
+.atracoes__lista {
+	background: #888888;
+    border: 2pt solid gray;
+	border-radius: 5px;
+	color: white;
+    margin: 1rem 2rem;
+	padding: 0.5rem;
+	text-align: center;
+    
+}
+
+.atracoes__lista:hover {
+	background: black;
+	transform: scale(1.05);
+}
+
+.atracoes li h5 {
+	font-size: 1.5rem;
+	margin: 0.5rem;	
+}
+
+@media screen and (min-width:0px){
+    .atracoes {
+        width: 100%;	
+    }
+}
+
+@media screen and (min-width: 640px){
+    .atracoes {
+        width: 50%;	
+    }
+}

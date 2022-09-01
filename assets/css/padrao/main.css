@@ -1,0 +1,21 @@
+main {
+    background: url(../../Img/fundo.jpg);
+    background-size: contain;
+    padding: 0 5%;
+    position: relative;
+}
+
+/*
+
+const botoesAbreCard = document.querySelectorAll('.botao-abre-card');
+const cards = document.querySelectorAll('.card');
+
+for(i = 0; i < botoesAbreCard.length; i++) {
+    const botaoAbreCard = botoesAbreCard[i];
+    const card = cards[i];
+    botaoAbreCard. = card.classList.add('card-aberto');
+
+
+}
+
+*/
