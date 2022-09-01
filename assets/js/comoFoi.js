@@ -1,9 +1,95 @@
 //declare variables
 let dayDiv = '';
 let currentOpenedImage = '';
+let bandasSlideMarginLeft = 0;
+let minMarginLeft = '';
 
 
 // Functions
+
+function returnBandasJson(){
+    fetch("http://127.0.0.1:5500/assets/json/bandas_slides.html").
+        then(response => response.json()).
+        then(bandas => createBandasSlides(bandas))
+}
+function createBandasSlides(bandas){
+    const bandasSlidesDiv = document.querySelector('.apresentation__bandas___slides');
+    bandas.forEach((banda)=>{
+        const bandaSlide = document.createElement('div');
+        bandaSlide.className = 'apresentation__bandas___slide';
+        bandaSlide.style.backgroundImage = `url(./assets/Img/2022/images/${banda.backing})`;
+        bandasSlidesDiv.appendChild(bandaSlide);
+        createBandaSlideContent(bandaSlide,banda);   
+    })
+    setSlidesControlButton();
+}
+function createBandaSlideContent(bandaSlide,banda) {
+    const bandaSlideTitleDiv = document.createElement('div');
+    bandaSlideTitleDiv.className = "bandas__slide___title-div";
+    const bandaSlideTitle = document.createElement('h3');
+    bandaSlideTitle.className = "bandas__slide___title main__subtitles";
+    bandaSlideTitle.innerText = banda.name;
+    bandaSlide.appendChild(bandaSlideTitleDiv);
+    bandaSlideTitleDiv.appendChild(bandaSlideTitle);
+}
+function setSlidesControlButton(){
+    const slideControlButtons = document.querySelectorAll('.slides__control-buttons');
+    slideControlButtons.forEach((slideButton)=>{
+        slideButton.addEventListener('click',()=>{
+            
+            moveSlide(slideButton);
+        })
+    }) 
+    verifiesScreenSize(); 
+}
+function moveSlide(slideButton){
+    const slidesDiv = document.querySelector('.apresentation__bandas___slides');
+    if(slideButton.id === "previous-slide__button"){
+        if(bandasSlideMarginLeft + 100 > 0){
+            bandasSlideMarginLeft += 50;
+        }else{
+            bandasSlideMarginLeft += 100;
+        } 
+    }
+    if(slideButton.id === "next-slide__button"){
+        if(bandasSlideMarginLeft - 100 < minMarginLeft){
+            bandasSlideMarginLeft -= 50;
+        }else{
+            bandasSlideMarginLeft -= 100;
+        }   
+    }
+    slidesDiv.style.marginLeft = `${bandasSlideMarginLeft}%`;
+    activeOrDesactiveSlidesButtons() 
+}
+function verifiesScreenSize(){
+    const screenSize = window.innerWidth
+    if(screenSize >= 860){
+        minMarginLeft = -175;
+    }else if(screenSize >= 560){
+        minMarginLeft = -450;
+    }else{
+        minMarginLeft = -1000;
+    }
+    activeOrDesactiveSlidesButtons()
+}
+function activeOrDesactiveSlidesButtons(){
+    const leftSlideButton = document.querySelector('#previous-slide__button');
+    const rightSlideButton = document.querySelector('#next-slide__button');
+
+    if(bandasSlideMarginLeft === 0){
+        leftSlideButton.style.display = 'none';
+    }else{
+        leftSlideButton.style.display = 'block';
+    }
+
+    if(bandasSlideMarginLeft <= minMarginLeft){
+        rightSlideButton.style.display = 'none';
+    }else{
+        rightSlideButton.style.display = 'block';
+    }
+}
+
+
 
 function putsImageInDayDiv() {
     // DOMINGO
@@ -50,7 +136,6 @@ function createImages(response,dayDiv){
 }              
 function setEventListenerToPhotos(){
     const imagesButtons = Array.from(document.querySelectorAll('.images__button'));
-    console.log(imagesButtons)
     imagesButtons.forEach((button)=>{
         button.addEventListener('click', (img) => openImage(img.target));
     })
@@ -128,9 +213,10 @@ function toNextImage(){
 
 
 // Execute functions
+returnBandasJson();
+putsImageInDayDiv();
+setImagesControlButton();
 
-putsImageInDayDiv()
-setImagesControlButton()
 
 
 
