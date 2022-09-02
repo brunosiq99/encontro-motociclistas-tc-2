@@ -12,7 +12,7 @@ let visibilityKind = "1";
 // Functions
 
 function returnBandasJson(){
-    fetch("http://127.0.0.1:5500/assets/json/bandas_slides.html").
+    fetch("https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/bandas_slides.html").
         then(response => response.json()).
         then(bandas => createBandasSlides(bandas))
 }
