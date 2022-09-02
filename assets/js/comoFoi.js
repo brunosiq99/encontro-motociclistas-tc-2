@@ -12,7 +12,7 @@ let visibilityKind = "1";
 // Functions
 
 function returnBandasJson(){
-    fetch("https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/bandas_slides.html").
+    fetch("http://127.0.0.1:5500/assets/json/bandas_slides.html").
         then(response => response.json()).
         then(bandas => createBandasSlides(bandas))
 }
@@ -50,14 +50,14 @@ function moveSlide(slideButton){
     const slidesDiv = document.querySelector('.apresentation__bandas___slides');
     if(slideButton.id === "previous-slide__button"){
         if(bandasSlideMarginLeft + 100 > 0){
-            bandasSlideMarginLeft += 50;
+            bandasSlideMarginLeft = 0;
         }else{
             bandasSlideMarginLeft += 100;
         } 
     }
     if(slideButton.id === "next-slide__button"){
         if(bandasSlideMarginLeft - 100 < minMarginLeft){
-            bandasSlideMarginLeft -= 50;
+            bandasSlideMarginLeft = minMarginLeft;
         }else{
             bandasSlideMarginLeft -= 100;
         }   
