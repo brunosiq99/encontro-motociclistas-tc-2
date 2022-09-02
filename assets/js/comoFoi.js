@@ -1,4 +1,5 @@
 //declare variables
+const alldayDivs = document.querySelectorAll('.images__content');
 let dayDiv = '';
 let currentOpenedImage = '';
 let bandasSlideMarginLeft = 0;
@@ -94,62 +95,34 @@ function activeOrDesactiveSlidesButtons(){
 
 
 
-function putsImageInDayDiv() {
-    // DOMINGO
-    
-    dayDiv = document.getElementById('images_domingo'); 
-    fetch(`https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/${dayDiv.id}.html`).
-        then((response) => {    
-            createImages(response,dayDiv)
-        }).
-        then(()=>{
-            // SÁBADO
-            dayDiv = document.getElementById('images_sabado');
-            fetch(`https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/${dayDiv.id}.html`).
-                then((response) => {
-                    createImages(response,dayDiv)
-                }).
-                then(()=>{
-                    // SEXTA
-                    dayDiv = document.getElementById('images_sexta');
-                    fetch(`https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/${dayDiv.id}.html`).
-                        then((response) => { 
-                            createImages(response,dayDiv)
-                        }).
-                        then(()=>{
-                            setTimeout(()=>setEventListenerToPhotos(),500);     //Time to load all fetch
-                        })
-                })
-                
-        })
-}   
-function createImages(response,dayDiv){
-    response.json().
-    then(imgs => {
-        imgs.forEach(img => {
-            console.log(img.visibility)
-            if(img.visibility === visibilityKind){
-                const imageButton = document.createElement('button');
-                const image = document.createElement('img');
-                
-                imageButton.className = "images__button";
-                image.src = `./assets/img/2022/images/${img.link}`;
-                image.className = "images__img";
-                dayDiv.appendChild(imageButton);
-                imageButton.appendChild(image); 
-            }   
-        })
-    })
-}              
-function setEventListenerToPhotos(){
-    const imagesButtons = Array.from(document.querySelectorAll('.images__button'));
-    imagesButtons.forEach((button)=>{
-        button.addEventListener('click', (img) => openImage(img.target));
-    })
+function putsImageInDayDiv(dayDiv){
+    const fetchPromise = new Promise((resolv)=>{
+        fetch(`https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/${dayDiv.id}.html`).
+            then((response) => response.json()).
+            then(imgs => {
+                imgs.forEach((img)=>{
+                    createImage(img,dayDiv);
+                });
+            });        
+    });   
+}    
+function createImage(img,dayDiv){ 
+    if(img.visibility == visibilityKind){
+        const imageButton = document.createElement('button');
+        const image = document.createElement('img');
+        
+        imageButton.addEventListener('click',img => openImage(img.target));
+        imageButton.className = "images__button";
+        image.src = `./assets/img/2022/images/${img.link}`;
+        image.className = "images__img";
+        dayDiv.appendChild(imageButton);
+        imageButton.appendChild(image);   
+    }        
 }
 function openImage(image){
     visibilityKind = '0';
-    putsImageInDayDiv() 
+    const dayDiv = image.parentNode.parentNode
+    putsImageInDayDiv(dayDiv) 
     const imageSection = document.querySelector('.show-images-videos');
     imageSection.classList.add('show-images-videos__active');
     currentOpenedImage = image; 
@@ -157,9 +130,6 @@ function openImage(image){
     openedImage.className = 'image__opened';
     imageSection.appendChild(openedImage);   
 }
-
-
-
 function setImagesControlButton(){
     const closeButton = document.getElementById('close-image__button');
     const previousButton = document.getElementById('previous-image__button');
@@ -205,7 +175,11 @@ function controlImage(button){
 
 // Execute functions
 returnBandasJson();
-putsImageInDayDiv();
+
+alldayDivs.forEach((dayDiv)=>{
+    putsImageInDayDiv(dayDiv);
+})
+
 setImagesControlButton();
 
 
