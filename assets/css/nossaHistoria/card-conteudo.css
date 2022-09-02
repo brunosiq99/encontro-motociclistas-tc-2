@@ -1,0 +1,16 @@
+.card__conteudo {
+    display: none;
+}
+
+.card-aberto {
+
+    display: grid;
+    grid-template-areas:
+        "card-texto" 
+        "card-imagens";
+    grid-area: card-conteudo;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    padding-top: 1rem;
+
+}
