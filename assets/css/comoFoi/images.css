@@ -6,7 +6,11 @@
     color: white;
 }
 .images__divs{
-    padding: 2rem 0 ;
+    align-items: center;
+    display:flex;
+    border-bottom: 0.25pt solid #a9a9a9;
+    flex-direction: column;
+    margin: 2rem 0;
 }
 .images__content{
     display: flex;
@@ -27,6 +31,16 @@
 }
 .images__img{
     max-width: 100%;    
+}
+.images__ver-mais {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'montserrat',cursive;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fdfdfd;
+    margin-top: 1rem;
 }
 @media screen and (min-width: 560px){
     .images__button{
