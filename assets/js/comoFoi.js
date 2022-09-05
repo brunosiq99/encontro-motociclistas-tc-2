@@ -12,7 +12,7 @@ let visibilityKind = "1";
 // Functions
 
 function returnBandasJson(){
-    fetch("https://www.encontromotociclistas.com.br/assets/json/bandas_slides.html").
+    fetch("http://127.0.0.1:5500/assets/json/bandas_slides.html").
         then(response => response.json()).
         then(bandas => createBandasSlides(bandas))
 }
@@ -96,15 +96,19 @@ function activeOrDesactiveSlidesButtons(){
 
 
 function putsImageInDayDiv(dayDiv){
-    const fetchPromise = new Promise((resolv)=>{
-        fetch(`https://brunosiq99.github.io/encontro-motociclistas-tc-2/assets/json/${dayDiv.id}.html`).
-            then((response) => response.json()).
-            then(imgs => {
-                imgs.forEach((img)=>{
-                    createImage(img,dayDiv);
-                });
-            });        
-    });   
+    if(dayDiv.childNodes.length <= 4){
+        const fetchPromise = new Promise((resolv)=>{
+            fetch(`http://127.0.0.1:5500/assets/json/${dayDiv.id}.html`).
+                then((response) => response.json()).
+                then(imgs => {
+                    imgs.forEach((img)=>{
+                        createImage(img,dayDiv);
+                    });
+                });        
+        }); 
+    }else{
+        controlImagesDisplay(dayDiv,'block');
+    }   
 }    
 function createImage(img,dayDiv){ 
     if(img.visibility == visibilityKind){
@@ -121,8 +125,10 @@ function createImage(img,dayDiv){
 }
 function openImage(image){
     visibilityKind = '0';
-    const dayDiv = image.parentNode.parentNode
-    putsImageInDayDiv(dayDiv) 
+    const dayDiv = image.parentNode.parentNode;
+    
+    const divButton = dayDiv.nextElementSibling;
+    changeButtonAngleText(divButton) 
     const imageSection = document.querySelector('.show-images-videos');
     imageSection.classList.add('show-images-videos__active');
     currentOpenedImage = image; 
@@ -172,15 +178,43 @@ function controlImage(button){
     imageSection.removeChild(removedImage);
     imageSection.appendChild(openedImage);
 }
+function controlImagesDisplay(dayDiv, newDisplay){
+    for(i = 4; i < dayDiv.childNodes.length; i++){
+        dayDiv.childNodes[i].style.display = newDisplay;
+    }
+}
+
+// Ver Mais/Menos Button
+function setVerMaisButton(){
+    const verMaisButtons = document.querySelectorAll('.images__ver-mais');
+    
+    verMaisButtons.forEach((button)=>{
+        button.addEventListener('click',()=>{
+            visibilityKind = '0';
+            dayDiv = button.previousElementSibling;
+            changeButtonAngleText(button);
+        })
+    })
+}
+function changeButtonAngleText(button){
+    dayDiv = button.previousElementSibling;
+    const buttonIcon = button.childNodes[1];
+    if(buttonIcon.classList.contains('fa-angle-down')){
+        button.innerHTML  =`Ver Menos <i class="fa-solid fa-angle-up icon-white fa-1x"></i>`;
+        putsImageInDayDiv(dayDiv);          // if ImageinDayDiv is already loaded, it goes to controlImagesDisplay
+    }else{
+        button.innerHTML = 'Ver Mais <i class="fa-solid fa-angle-down icon-white fa-1x"></i>';
+        controlImagesDisplay(dayDiv,'none');
+    }
+}
 
 // Execute functions
 returnBandasJson();
-
 alldayDivs.forEach((dayDiv)=>{
     putsImageInDayDiv(dayDiv);
-})
-
+});
 setImagesControlButton();
+setVerMaisButton();
 
 
 
