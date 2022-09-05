@@ -12,7 +12,7 @@ let visibilityKind = "1";
 // Functions
 
 function returnBandasJson(){
-    fetch("http://127.0.0.1:5500/assets/json/bandas_slides.html").
+    fetch("https://www.encontromotociclistas.com.br/assets/json/bandas_slides.html").
         then(response => response.json()).
         then(bandas => createBandasSlides(bandas))
 }
@@ -98,7 +98,7 @@ function activeOrDesactiveSlidesButtons(){
 function putsImageInDayDiv(dayDiv){
     if(dayDiv.childNodes.length <= 4){
         const fetchPromise = new Promise((resolv)=>{
-            fetch(`http://127.0.0.1:5500/assets/json/${dayDiv.id}.html`).
+            fetch(`https://www.encontromotociclistas.com.br/assets/json/${dayDiv.id}.html`).
                 then((response) => response.json()).
                 then(imgs => {
                     imgs.forEach((img)=>{
