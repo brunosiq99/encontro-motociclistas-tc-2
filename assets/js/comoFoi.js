@@ -51,7 +51,7 @@ function verifiesScreenSize(){
 function putsImageInDayDiv(dayDiv){
     if(dayDiv.childNodes.length <= 4){
         const fetchPromise = new Promise((resolv)=>{
-            fetch(`https://encontromotciclistas/assets/json/${dayDiv.id}.html`).
+            fetch(`https://encontromotociclistas/assets/json/${dayDiv.id}.html`).
                 then((response) => response.json()).
                 then(imgs => {
                     imgs.forEach((img)=>{
