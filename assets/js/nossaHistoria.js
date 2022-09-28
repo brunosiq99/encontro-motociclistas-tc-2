@@ -26,7 +26,7 @@ function setSlidesWidthAndMargin(slider,slides,sliderWidth){
         slide.style.width = slideWidth+'%';
     })
 }
-fetch('https://encontromotociclistas/assets/json/banner-nossa-historia.html').
+fetch('https://encontromotociclistas.com.br/assets/json/banner-nossa-historia.html').
     then(data => data.json()).
     then(response => {
         response.forEach(banner => loadBanner(banner));
