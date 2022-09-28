@@ -11,7 +11,7 @@ let visibilityKind = "1";
 // Functions
 import {setSlidesControlButton, activeOrDesactiveSlidesButtons} from './moveSlide.js';
 function returnBandasJson(){
-    fetch("encontromotociclistas.com.br/assets/json/bandas_slides.html").
+    fetch("https://www.encontromotociclistas.com.br/assets/json/bandas_slides.html").
         then(response => response.json()).
         then(bandas => createBandasSlides(bandas))
 }
