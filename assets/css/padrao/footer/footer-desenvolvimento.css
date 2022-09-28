@@ -1,0 +1,45 @@
+.footer__desenvolvimento___lista {
+    display: flex;
+    align-items: center;
+}
+
+.footer__desenvolvimento___item {
+    margin-left: 1rem;
+}
+
+footer .fa-brands{
+	background: #fefefe;
+	border-radius: 10px;
+	color: #888888;
+	padding: 0.3rem 0;
+	text-decoration: none;
+	width: 2.4rem;
+}
+footer .fa-solid {
+    background: #fefefe;
+	border-radius: 10px;
+	color: #888888;
+	text-decoration: none;
+	width: 2.4rem;
+}
+
+.fa-github:hover{
+    color: #191970;
+}
+
+.fa-browser:hover{
+    color: #666666;
+}
+
+@media screen and (max-width:680px) {
+
+    .fa-github{
+        color: #191970;
+    }
+    .fa-browser{
+        color: #666666;
+    }
+    .footer__desenvolvimento___item {
+        font-size: 0.6rem;
+    }
+}

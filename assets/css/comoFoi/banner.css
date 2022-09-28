@@ -1,0 +1,41 @@
+.banner{
+    background-image: url(../../Img/2022/banner.png);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;  
+    height:  calc(100vh - 4rem); 
+    padding-top: 4rem;
+}
+.banner__content{
+    align-items: center;
+    backdrop-filter: brightness(30%);
+    color: #fdfdfd;
+    display: flex;
+    flex-direction: column; 
+    font-family: 'new rocker', cursive;
+    height: 100%;
+    justify-content:space-around;
+    text-align: center;
+    width: 100%;
+}
+.banner__title{
+    margin: 0 0.5rem; 
+    font-size: 2.65rem;
+}
+.banner__img{
+    max-width: 70%;
+    width: 17rem;
+}
+.banner__subtitle{
+    margin: 0 0.5rem; 
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width:1080px) {
+    .banner__title{
+        font-size: 3rem;
+    }
+    .banner__subtitle{
+        font-size: 2rem;
+    }
+}
