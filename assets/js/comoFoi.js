@@ -11,7 +11,7 @@ let visibilityKind = "1";
 // Functions
 import {setSlidesControlButton, activeOrDesactiveSlidesButtons} from './moveSlide.js';
 function returnBandasJson(){
-    fetch("http://127.0.0.1:5500/assets/json/bandas_slides.html").
+    fetch("https://encontromotociclistas/assets/json/bandas_slides.html").
         then(response => response.json()).
         then(bandas => createBandasSlides(bandas))
 }
@@ -51,7 +51,7 @@ function verifiesScreenSize(){
 function putsImageInDayDiv(dayDiv){
     if(dayDiv.childNodes.length <= 4){
         const fetchPromise = new Promise((resolv)=>{
-            fetch(`http://127.0.0.1:5500/assets/json/${dayDiv.id}.html`).
+            fetch(`https://encontromotciclistas/assets/json/${dayDiv.id}.html`).
                 then((response) => response.json()).
                 then(imgs => {
                     imgs.forEach((img)=>{
