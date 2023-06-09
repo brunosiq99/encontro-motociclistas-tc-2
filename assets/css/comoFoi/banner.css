@@ -30,6 +30,10 @@
     margin: 0 0.5rem; 
     font-size: 1.5rem;
 }
+.banner__subtitle___level2{
+    margin 0 0.5rem;
+    font-size:1.25rem;
+}
 
 @media screen and (min-width:1080px) {
     .banner__title{
