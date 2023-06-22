@@ -2,10 +2,10 @@
     "pages":[
         {
             "name":"Home",
-            "url":"http://localhost:3000/"
+            "path":"/"
         },{
             "name":"Anos Anteriores",
-            "url":"http://localhost:3000/anteriores"
+            "path":"/anos-anteriores"
         }    
     ],
     "colorStyles":{
@@ -29,6 +29,27 @@
             {
                 "name":"Go Mobilidade Urbana",
                 "imgFile":"go-mobilidade.png"
+            },{
+                "name":"MotoGerais",
+                "imgFile":"motogerais.jpeg"
+            },{
+                "name":"Paddock",
+                "imgFile":"paddock.jpeg"
+            },{
+                "name":"Loja Zuza",
+                "imgFile":"loja-zuza.png"
+            },{
+                "name":"Scap Centro Automotivo",
+                "imgFile":"scap.png"
+            },{
+                "name":"Ótica Real",
+                "imgFile":"otica-real.jpeg"
+            },{
+                "name":"Terremoto Moto Peças",
+                "imgFile":"terremoto.jpeg"
+            },{
+                "name":"Auto Center WS Rodas",
+                "imgFile":"ws-rodas.jpeg"
             }
         ]
     }
