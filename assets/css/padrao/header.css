@@ -5,7 +5,7 @@ header{
     padding: 0.3rem 5%;
     position: fixed;
     text-transform: uppercase;
-    width: 90%;
+    width: 100vw;
     z-index: 100; 
 }
 .header__container{
