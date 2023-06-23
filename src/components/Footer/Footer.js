@@ -15,8 +15,6 @@ const StyledFooter = styled.footer`
     .footer__logo{
         width: 12rem;
     }
-    
-    
 `
 
 const Footer = () => {
