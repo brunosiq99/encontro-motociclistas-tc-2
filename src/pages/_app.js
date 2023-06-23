@@ -1,10 +1,9 @@
-import React, {useContext} from 'react'; 
+import React, {useContext} from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Styles } from '@/styles/CssReset';
+import CssReset from '@/styles/CssReset';
+import Styles from '@/styles/Styles';
 import { ColorModeContext, ColorModeProvider } from '@/styles/ColorMode';
 import config from '../../config.json';         //Import all json data and configs
-
-
 
 const ProviderWrapper = ({children}) => {
   	return(
@@ -16,14 +15,15 @@ const ProviderWrapper = ({children}) => {
 
 const MyApp = ({Component, pageProps}) => {
 	const context = useContext(ColorModeContext)
-    return(     
+    return(            
         <ThemeProvider theme={config.colorStyles[context.mode]}>
+            <CssReset />
             <Styles />
             <Component
                 config={config}
                 {...pageProps} 
             />
-        </ThemeProvider>   
+        </ThemeProvider>
     )
 }
 export default function App(pageProps) {

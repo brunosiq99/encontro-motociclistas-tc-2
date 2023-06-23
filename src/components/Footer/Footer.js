@@ -4,6 +4,7 @@ import React from "react";
 const StyledFooter = styled.footer`
     background-color: #030303;
     bottom: 0;
+    width: 100vw;
     
     .footer__content{
         align-items: center;

@@ -1,12 +1,13 @@
-
+import { usePathname } from 'next/navigation';
 import { returnRandomIntBetween0andX } from "@/functions/returnRandomIntBetween0andX";
 import React from "react";
 import { styled } from "styled-components";
+import Link from "next/link";
 const StyledHorizontalNav = styled.nav`
     align-items: stretch;
     display: flex;
     height: 100%;
-    a{
+    .link{
         align-items: center;
         display: flex;
         color: #fdfdfd;
@@ -16,7 +17,7 @@ const StyledHorizontalNav = styled.nav`
         position: relative;
         text-decoration: none;
     }
-    a:first-child::after{
+    .active::after{
         position: absolute;
         content: "";
         background: orange;
@@ -29,18 +30,18 @@ const HorizontalNav = ({pages}) => {
     return(
         <StyledHorizontalNav>
             {pages.map((page)=>{
-                // Add especial class for the active page anchor
-                let className = "aActive";
-                //page.url === getCurrentURL() ? className = "aActive": className = "";
-
+                const currentPath = usePathname()
+                console.log(currentPath)
+                let className = '';
+                currentPath == page.path ? className = "link active" : className = "link";
                 return(
-                    <a 
-                        key={`page-ref${returnRandomIntBetween0andX(100000)}`}
-                        href={page.url}
+                    <Link
                         className={className}
+                        href={`./${page.path}`}
+                        key={`page-ref${returnRandomIntBetween0andX(100000)}`}
                     >
                         {page.name}
-                    </a>
+                    </Link>
                 )              
             })}
         </StyledHorizontalNav>

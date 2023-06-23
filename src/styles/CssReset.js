@@ -1,6 +1,6 @@
 
 import { createGlobalStyle } from "styled-components";
-export const Styles = createGlobalStyle`
+const CssReset = createGlobalStyle`
   /* Reset */
 * {
 	margin: 0;
@@ -39,18 +39,6 @@ export const Styles = createGlobalStyle`
 	  opacity: .5;
 	}
   }
-
-  /* Fonts */
-  @font-face { 
-	font-family: brookshire; 
-	src: url('../fonts/BrookshireRegular.ttf') format("truetype");
-	font-weight: normal;
-	font-style: italic;
-  };
-
-  /* Container */
-  .container{
-	padding: 1rem 5rem;
-  }
-  
 `;
+
+export default CssReset;

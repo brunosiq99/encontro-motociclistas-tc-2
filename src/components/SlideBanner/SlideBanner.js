@@ -5,13 +5,13 @@ import BannerOne from "./components/BannerOne";
 
 
 const StyledSlideBanner = styled.section`
-    .slider{
-        background-color: rgba(0,0,0,0.8);
-        height: 82vh;
-        margin-top: 8vh;
-        overflow: hidden;
-        width: 100vw;
-    }
+    
+    background-color: rgba(0,0,0,0.8);
+    height: 75vh;
+    margin-top: 8vh;
+    overflow: hidden;
+    width: 100vw;
+    
     .slides{
         height: 100%;
     }
@@ -21,7 +21,6 @@ const StyledSlideBanner = styled.section`
     }
 
     @media screen and (max-width: 640px) {
-        height: 42vh;
     }
 
 `
@@ -38,36 +37,34 @@ const SlideBanner = () => {
     ]
     return(
         <StyledSlideBanner>
-            <div className="slider">
-                <div className="slides">
-                    {
-                        bannersToLoad.map((banner) => {
-                            if(banner.styledComp !== "" ){
-                                return(
-                                    <div 
-                                        key={`banner${returnRandomIntBetween0andX(5000000)}`}
-                                        className="slide"
-                                    >
-                                        {banner.styledComp}
-                                    </div>
-                                )
-                            }else{
-                                return(
-                                    <a 
-                                        key={`banner${returnRandomIntBetween0andX(5000000)}`}  
-                                        href={banner.imgHref} 
-                                        className="slide"
-                                    >
-                                        <img 
-                                            
-                                            src={banner.imgSrc}
-                                        />
-                                    </a>
-                                )
-                            }
-                        })
-                    }
-                </div>
+            <div className="slides">
+                {
+                    bannersToLoad.map((banner) => {
+                        if(banner.styledComp !== "" ){
+                            return(
+                                <div 
+                                    key={`banner${returnRandomIntBetween0andX(5000000)}`}
+                                    className="slide"
+                                >
+                                    {banner.styledComp}
+                                </div>
+                            )
+                        }else{
+                            return(
+                                <a 
+                                    key={`banner${returnRandomIntBetween0andX(5000000)}`}  
+                                    href={banner.imgHref} 
+                                    className="slide"
+                                >
+                                    <img 
+                                        
+                                        src={banner.imgSrc}
+                                    />
+                                </a>
+                            )
+                        }
+                    })
+                }
             </div>
         </StyledSlideBanner>
     )
