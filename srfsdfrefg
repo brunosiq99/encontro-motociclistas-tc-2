@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <Routes>
                         <Route element={ <Home config={config} /> } path='/' exact />
                         <Route element={ <AnosAnteriores config={config} /> } path="/anos-anteriores" />
+=======
+<Routes>
+                        <Route element={ <Home config={config} /> } path='/' exact />
+                        <Route element={ <AnosAnteriores config={config} /> } path="/anos-anteriores" />
+>>>>>>> f1094915a0d9661cb23beeac5b8871355aa98dfb
                     </Routes> 
