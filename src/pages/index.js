@@ -3,8 +3,8 @@ import SlideBanner from '@/components/SlideBanner/SlideBanner';
 import Partners from '@/components/Partners/Partners';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
+
 const Home = ({config}) => {
-    console.log(config)
     return (
         <div>
             <Header config={config} />
