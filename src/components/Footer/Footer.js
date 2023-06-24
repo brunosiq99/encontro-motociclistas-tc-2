@@ -17,7 +17,7 @@ const StyledFooter = styled.footer`
     }
 `
 
-const Footer = () => {
+const Footer = ({loaded,setLoaded}) => {
     return(
         <StyledFooter>
             <div className="container footer__content ">

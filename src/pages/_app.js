@@ -28,6 +28,8 @@ const MyApp = ({Component, pageProps}) => {
     )
 }
 export default function App(pageProps) {
+    
+    
     return(
         <ProviderWrapper>
             <MyApp {...pageProps} ></MyApp>
