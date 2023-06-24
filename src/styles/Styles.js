@@ -12,7 +12,13 @@ const Styles = createGlobalStyle`
             padding: 1rem 5rem;
         }
     }
-  
+
+    /* Fonts */
+    body{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+    }
+    
 `;
 
 export default Styles;

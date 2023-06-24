@@ -9,8 +9,8 @@ const StyledHeader = styled.header`
     background: #030303;
     color: #fdfdfd;
     display: flex;
-    font-family: 'New Rocker', cursive;
     height: 8vh;
+    
     justify-content: space-between;
     padding: 0 5%;
     position: fixed;

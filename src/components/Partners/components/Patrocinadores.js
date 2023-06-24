@@ -58,9 +58,6 @@ const StyledPatrocinadores = styled.div`
             transform: translateX(0);
         }
     }
-
-
-
 `
 
 const Patrocinadores = ({patrocinadores}) => {
@@ -97,7 +94,7 @@ const Patrocinadores = ({patrocinadores}) => {
                 {patrocinadores.map((patrocinador) => {
                     return(
                         <li className="slide" key={`patrocinio${returnRandomIntBetween0andX(100000)}`}>
-                            <img src={`@/img/parceiros/patrocinadores/${patrocinador.imgFile}`} alt={patrocinador.name} />
+                            <img src={`img/parceiros/patrocinadores/${patrocinador.imgFile}`} alt={patrocinador.name} />
                         </li>
                     )
                 })}
