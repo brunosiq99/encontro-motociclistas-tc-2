@@ -18,7 +18,7 @@ const MyApp = ({Component, pageProps}) => {
     return(            
         <ThemeProvider theme={config.colorStyles[context.mode]}>
             <CssReset />
-            
+            <Styles />
             <Component
                 
                 {...pageProps} 
