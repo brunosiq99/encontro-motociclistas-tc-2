@@ -4,6 +4,7 @@ import Partners from '@/components/Partners/Partners';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 const Home = ({config}) => {
+    console.log('VAI TOMAR NO CU')
     return (
         <main>
             <Header config={config} />
