@@ -10,7 +10,6 @@ const Home = ({config}) => {
             <SlideBanner 
             />
             <Partners
-                className='putaquepariu'
                 partners={config.partners}
             />
             <Footer config={config} />           
