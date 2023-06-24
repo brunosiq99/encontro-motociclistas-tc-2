@@ -4,17 +4,20 @@ import Partners from '@/components/Partners/Partners';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 const Home = ({config}) => {
-    console.log('VAI TOMAR NO CU')
+    console.log(config)
     return (
-        <main>
+        <div>
             <Header config={config} />
-            <SlideBanner 
-            />
-            <Partners
-                partners={config.partners}
-            />
+            <main> 
+                <SlideBanner 
+                />
+                <Partners
+                    partners={config.partners}
+                />
+                <p>87542,5225-----</p>
+            </main>
             <Footer config={config} />           
-        </main>
+        </div>  
     )
 }
 
