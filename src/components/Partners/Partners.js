@@ -6,6 +6,7 @@ const StyledPartners = styled.section`
     overflow-x: hidden;
 
     h2{
+        color: #000;
         text-align: center;
         text-transform: uppercase;
         font-size: 1.25rem;

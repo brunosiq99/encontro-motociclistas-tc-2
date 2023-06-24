@@ -14,7 +14,6 @@ const Home = ({config}) => {
                 <Partners
                     partners={config.partners}
                 />
-                <p>87542,5225-----</p>
             </main>
             <Footer config={config} />           
         </div>  
