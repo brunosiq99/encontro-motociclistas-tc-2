@@ -20,9 +20,7 @@ const Partners = ({partners}) => {
             className="container"
         >
             <h2>Parceiros</h2>
-            <Patrocinadores 
-                patrocinadores={partners.patrocinadores}
-            />
+            
         </StyledPartners>
     )
 }
