@@ -1,5 +1,5 @@
 import { usePathname } from 'next/navigation';
-import { returnRandomIntBetween0andX } from "@/functions/returnRandomIntBetween0andX";
+import { returnRandomIntBetween0andX } from "@/src/functions/returnRandomIntBetween0andX";
 import React from "react";
 import { styled } from "styled-components";
 import Link from "next/link";

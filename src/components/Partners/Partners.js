@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import Patrocinadores from "./components/Patrocinadores";
 //import Patrocinadores from "./components/Patrocinadores";
 const StyledPartners = styled.section`
     background-color: #fdfdfd;
@@ -20,7 +21,9 @@ const Partners = ({partners}) => {
             className="container"
         >
             <h2>Parceiros</h2>
-            
+            <Patrocinadores 
+                patrocinadores={partners.patrocinadores}
+            />
         </StyledPartners>
     )
 }

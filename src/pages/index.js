@@ -1,8 +1,9 @@
 import React from 'react';
-import SlideBanner from '@/components/SlideBanner/SlideBanner';
-import Partners from '@/components/Partners/Partners';
-import Footer from '@/components/Footer/Footer';
-import Header from '@/components/Header/Header';
+import SlideBanner from '@/src/components/SlideBanner/SlideBanner';
+import Partners from '@/src/components/Partners/Partners';
+import Footer from '@/src/components/Footer/Footer';
+import Header from '@/src/components/Header/Header';
+
 
 const Home = ({config}) => {
     return (

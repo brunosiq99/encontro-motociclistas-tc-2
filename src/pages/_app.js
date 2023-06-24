@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
 import { ThemeProvider } from 'styled-components';
-import CssReset from '@/styles/CssReset';
-import Styles from '@/styles/Styles';
-import { ColorModeContext, ColorModeProvider } from '@/styles/ColorMode';
-import config from '../../config.json';         //Import all json data and configs
+import CssReset from '@/src/styles/CssReset';
+import Styles from '@/src/styles/Styles';
+import { ColorModeContext, ColorModeProvider } from '@/src/styles/ColorMode';
+import config from '@/config.json';         //Import all json data and configs
 
 const ProviderWrapper = ({children}) => {
   	return(

@@ -1,4 +1,4 @@
-import { returnRandomIntBetween0andX } from "@/functions/returnRandomIntBetween0andX";
+import { returnRandomIntBetween0andX } from "@/src/functions/returnRandomIntBetween0andX";
 import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
 

@@ -1,14 +1,13 @@
 import React from "react";
 import { styled } from "styled-components";
 
-
 const StyledBannerOne = styled.div`
     @font-face { 
         font-family: "Kawit Free"; 
-        src: local('Kawit Free'), url('fonts/KawitFree-Italic.ttf') format('TrueType');
+        src: local('Kawit Free'), url('../../../fonts/KawitFree-Italic.ttf') format('TrueType');
     }
 
-    background-image: url('https://www.encontromotociclistas.com.br/assets/Img/2022/banner.png');
+    background-image: url('../../../pageAnosAnteriores/assets/Img/2022/banner.png');
     background-position: center;
     background-size: cover;
     height: 100%;
