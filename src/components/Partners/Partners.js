@@ -15,7 +15,6 @@ const StyledPartners = styled.section`
     }
 `
 const Partners = ({partners}) => {
-    console.log(partners)
     return(
         <StyledPartners
             className="container"

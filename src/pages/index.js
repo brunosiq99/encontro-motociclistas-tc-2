@@ -7,15 +7,17 @@ import Header from '@/components/Header/Header';
 const Home = ({config}) => {
     return (
         <div>
-            <Header config={config} />
+            <Header key="HeaderInHome" config={config} />
             <main> 
                 <SlideBanner 
+                    key="SlideBannerInHome"
                 />
                 <Partners
+                    key="PartnersInHome"
                     partners={config.partners}
                 />
             </main>
-            <Footer config={config} />           
+            <Footer key="FooterInHome" config={config} />           
         </div>  
     )
 }
