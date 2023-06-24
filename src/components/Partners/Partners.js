@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
-import Patrocinadores from "./components/Patrocinadores";
+//import Patrocinadores from "./components/Patrocinadores";
 const StyledPartners = styled.section`
     background-color: #fdfdfd;
     overflow-x: hidden;
@@ -10,11 +10,11 @@ const StyledPartners = styled.section`
         text-transform: uppercase;
         font-size: 1.25rem;
         font-weight: 500;
-        text-shadow: 1px 1px 3px #000; 
+        text-shadow: 1px 1px 2px #000; 
     }
 `
 const Partners = ({partners}) => {
-    
+    console.log(partners)
     return(
         <StyledPartners
             className="container"
