@@ -31,13 +31,12 @@ const HorizontalNav = ({pages}) => {
         <StyledHorizontalNav>
             {pages.map((page)=>{
                 const currentPath = usePathname()
-                console.log(currentPath)
                 let className = '';
                 currentPath == page.path ? className = "link active" : className = "link";
                 return(
                     <Link
                         className={className}
-                        href={`./${page.path}`}
+                        href={`.${page.path}`}
                         key={`page-ref${returnRandomIntBetween0andX(100000)}`}
                     >
                         {page.name}
