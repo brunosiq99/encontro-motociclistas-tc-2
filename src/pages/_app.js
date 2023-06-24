@@ -18,10 +18,11 @@ const MyApp = ({Component, pageProps}) => {
     return(            
         <ThemeProvider theme={config.colorStyles[context.mode]}>
             <CssReset />
-            <Styles />
+            
             <Component
-                config={config}
+                
                 {...pageProps} 
+                config={config}
             />
         </ThemeProvider>
     )
@@ -29,7 +30,7 @@ const MyApp = ({Component, pageProps}) => {
 export default function App(pageProps) {
     return(
         <ProviderWrapper>
-            <MyApp {...pageProps}></MyApp>
+            <MyApp {...pageProps} ></MyApp>
         </ProviderWrapper>
     )
 }
