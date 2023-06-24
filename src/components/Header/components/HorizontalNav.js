@@ -36,6 +36,7 @@ const HorizontalNav = ({pages}) => {
                 return(
                     <Link
                         className={className}
+                        passHref={true}
                         href={`.${page.path}`}
                         key={`page-ref${returnRandomIntBetween0andX(100000)}`}
                     >
