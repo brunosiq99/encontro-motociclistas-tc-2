@@ -17,10 +17,6 @@ const StyledSlideBanner = styled.section`
         height: 100%;
         width: 100vw;
     }
-    img{
-
-    }
-
 `
 
 const SlideBanner = () => {
