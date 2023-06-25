@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { ThemeProvider } from 'styled-components';
 import CssReset from '@/src/styles/CssReset';
 import Styles from '@/src/styles/Styles';
