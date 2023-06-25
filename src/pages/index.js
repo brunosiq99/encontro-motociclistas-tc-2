@@ -6,7 +6,11 @@ import SlideBanner from '@/src/components/SlideBanner/SlideBanner';
 const Home = ({config,reloaded}) => {  
     return (
         <div>
-            <Header key="HeaderInHome" config={config} />
+            <Header 
+                key="HeaderInHome" 
+                config={config} 
+                reloaded={reloaded}
+            />
             <main> 
                 <SlideBanner 
                     key="SlideBannerInHome"
