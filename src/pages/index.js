@@ -3,7 +3,7 @@ import Partners from '@/src/components/Partners/Partners';
 import Header from '@/src/components/Header/Header';
 import Footer from '@/src/components/Footer/Footer';
 import SlideBanner from '@/src/components/SlideBanner/SlideBanner';
-const Home = ({config}) => {  
+const Home = ({config,reloaded}) => {  
     return (
         <div>
             <Header key="HeaderInHome" config={config} />
