@@ -8,9 +8,7 @@ const Home = ({config}) => {
         <div>
             <Header key="HeaderInHome" config={config} />
             <main> 
-                <SlideBanner 
-                    key="SlideBannerInHome"
-                />
+                
                 <Partners
                     key="PartnersInHome"
                     partners={config.partners}
