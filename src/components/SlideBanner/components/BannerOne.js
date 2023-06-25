@@ -60,7 +60,7 @@ const BannerOne = () => {
                     </p>
                     <img 
                         key="BannerOne_Img"
-                        src="https://www.encontromotociclistas.com.br/assets/Img/new-logo-23-wdhite.png" 
+                        src="pageAnosAnteriores/assets/Img/new-logo-23-white.png" 
                         className="banner__logo"
                         alt="Encontro Nacional de Motociclistas e Triciclistas de Três Corações, Minas Gerais"
                     />

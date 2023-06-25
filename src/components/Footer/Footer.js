@@ -24,7 +24,7 @@ const Footer = () => {
                 <ul>
 
                 </ul>
-                <img key="Footer_Logo" className="footer__logo" src="https://www.encontromotociclistas.com.br/assfets/Img/new-logo-23-white.png"/>
+                <img key="Footer_Logo" className="footer__logo" src="pageAnosAnteriores/assets/Img/new-logo-23-white.png"/>
                 <ul>
 
                 </ul>
