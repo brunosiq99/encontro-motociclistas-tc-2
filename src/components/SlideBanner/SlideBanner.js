@@ -5,13 +5,11 @@ import BannerOne from "./components/BannerOne";
 
 
 const StyledSlideBanner = styled.section`
-    
     background-color: rgba(0,0,0,0.8);
     height: 75vh;
     margin-top: 8vh;
     overflow: hidden;
     width: 100vw;
-    
     .slides{
         height: 100%;
     }
@@ -19,7 +17,6 @@ const StyledSlideBanner = styled.section`
         height: 100%;
         width: 100vw;
     }
-
     @media screen and (max-width: 640px) {
     }
 
@@ -30,8 +27,8 @@ const SlideBanner = () => {
     //Beware: on bannersToLoad only fill imgUrl and href or styledComponent, otherwise the prefference will be for the styledComponent, ignoring imgUrl
     const bannersToLoad = [
         {
-            styledComp: <BannerOne />,
-            imgSrc:"",
+            styledComp: "",
+            imgSrc:"../../../public/img/bannerBG_LeCambada.png",
             href:""
         }
     ]
@@ -57,8 +54,7 @@ const SlideBanner = () => {
                                     className="slide"
                                 >
                                     <img 
-                                        
-                                        src={banner.imgSrc}
+                                        src={`${banner.imgSrc}`}
                                     />
                                 </a>
                             )
