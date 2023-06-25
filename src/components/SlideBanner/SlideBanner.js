@@ -27,8 +27,8 @@ const SlideBanner = () => {
     //Beware: on bannersToLoad only fill imgUrl and href or styledComponent, otherwise the prefference will be for the styledComponent, ignoring imgUrl
     const bannersToLoad = [
         {
-            styledComp: "",
-            imgSrc:"../../../public/img/bannerBG_LeCambada.png",
+            styledComp: <BannerOne />,
+            imgSrc:"",
             href:""
         }
     ]
