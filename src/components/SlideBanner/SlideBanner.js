@@ -23,8 +23,7 @@ const StyledSlideBanner = styled.section`
 
 `
 
-const SlideBanner = ({reloaded) => {
-    const carregou = reloaded;
+const SlideBanner = () => {
     /*
     //100vw and hidden overflow slider containing all slides defined in config.json
     //Beware: on bannersToLoad only fill imgUrl and href or styledComponent, otherwise the prefference will be for the styledComponent, ignoring imgUrl
