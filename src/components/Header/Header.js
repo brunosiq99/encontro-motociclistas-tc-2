@@ -37,7 +37,8 @@ const StyledHeader = styled.header`
     }
 `
 
-const Header = ({config}) => {
+const Header = ({config, reloaded}) => {
+    const caarregou = reloaded;
     return(
         <StyledHeader>
             <div className="header__title">
