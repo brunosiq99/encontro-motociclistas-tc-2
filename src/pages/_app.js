@@ -14,7 +14,7 @@ const ProviderWrapper = ({children}) => {
 }
 
 const MyApp = ({Component, pageProps}) => {
-    const [reloaded, setReloaded] = useState(false)
+    const [reloaded, setReloaded] = useState('false')
     const context = useContext(ColorModeContext)
     return(            
         <ThemeProvider theme={config.colorStyles[context.mode]}>
@@ -28,9 +28,9 @@ const MyApp = ({Component, pageProps}) => {
 	    {
                 // for some reason the Styled Components is not loading corretly in first load, so it's a way of reloading page components
                 useEffect(()=>{
-                    if(reloaded===false){
+                    if(reloaded==='false'){
                         setTimeout(()=>{
-                            setReloaded(true)
+                            setReloaded('true')
 			    console.log("Recarregou")
                         },5000)
                         //window.location.reload(false)
