@@ -15,7 +15,8 @@ const StyledPartners = styled.section`
         text-shadow: 1px 1px 2px #000; 
     }
 `
-const Partners = ({partners}) => {
+const Partners = ({partners,reloaded}) => {
+    const carregou = reloaded;
     return(
         <StyledPartners
             className="container"
