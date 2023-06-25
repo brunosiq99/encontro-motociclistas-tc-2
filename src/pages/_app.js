@@ -31,6 +31,7 @@ const MyApp = ({Component, pageProps}) => {
                     if(reloaded===false){
                         setTimeout(()=>{
                             setReloaded(true)
+			    console.log("Recarregou")
                         },5000)
                         //window.location.reload(false)
                     }
