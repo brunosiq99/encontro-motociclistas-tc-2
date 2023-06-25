@@ -4,14 +4,12 @@ import { styled } from "styled-components";
 import BannerOne from "./components/BannerOne";
 
 
-const StyledSlideBanner = styled.section`
-    
+const StyledSlideBannerSec = styled.section`
     background-color: rgba(0,0,0,0.8);
     height: 75vh;
     margin-top: 8vh;
     overflow: hidden;
     width: 100vw;
-    
     .slides{
         height: 100%;
     }
@@ -19,16 +17,18 @@ const StyledSlideBanner = styled.section`
         height: 100%;
         width: 100vw;
     }
+    img{
 
-    @media screen and (max-width: 640px) {
     }
 
 `
 
-const SlideBanner = () => {
+const SlideBannerSec = () => {
+    /*
     //100vw and hidden overflow slider containing all slides defined in config.json
     //Beware: on bannersToLoad only fill imgUrl and href or styledComponent, otherwise the prefference will be for the styledComponent, ignoring imgUrl
-    const bannersToLoad = [
+    */
+   const bannersToLoad = [
         {
             styledComp: <BannerOne />,
             imgSrc:"",
@@ -36,7 +36,7 @@ const SlideBanner = () => {
         }
     ]
     return(
-        <StyledSlideBanner>
+        <StyledSlideBannerSec>
             <div className="slides">
                 {
                     bannersToLoad.map((banner) => {
@@ -56,9 +56,8 @@ const SlideBanner = () => {
                                     href={banner.imgHref} 
                                     className="slide"
                                 >
-                                    <img 
-                                        
-                                        src={banner.imgSrc}
+                                    <img
+                                        src={`${banner.imgSrc}`}
                                     />
                                 </a>
                             )
@@ -66,8 +65,8 @@ const SlideBanner = () => {
                     })
                 }
             </div>
-        </StyledSlideBanner>
+        </StyledSlideBannerSec>
     )
 }
 
-export default SlideBanner
+export default SlideBannerSec;
