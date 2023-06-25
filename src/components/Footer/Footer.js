@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import React from "react";
 
-const StyledFooter = styled.footer`
+const StyledStandardFooter = styled.footer`
     background-color: #030303;
     bottom: 0;
     width: 100vw;
@@ -17,19 +17,19 @@ const StyledFooter = styled.footer`
     }
 `
 
-const Footer = () => {
+const StandardFooter = () => {
     return(
-        <StyledFooter>
+        <StyledStandardFooter>
             <div className="container footer__content ">
                 <ul>
 
                 </ul>
-                <img key="Footer_Logo" className="footer__logo" src="img/banners/banner_divulgacao1.jpeg"/>
+                <img key="Footer_Logo" className="footer__logo" src="pageAnosAnteriores/assets/Img/new-logo-23-white.png"/>
                 <ul>
 
                 </ul>
             </div>
-        </StyledFooter>
+        </StyledStandardFooter>
     )
 }
-export default Footer;
+export default StandardFooter;

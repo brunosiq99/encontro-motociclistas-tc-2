@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import BannerOne from "./components/BannerOne";
 
 
-const StyledSlideBanner = styled.section`
+const StyledSlideBannerSec = styled.section`
     background-color: rgba(0,0,0,0.8);
     height: 75vh;
     margin-top: 8vh;
@@ -17,10 +17,13 @@ const StyledSlideBanner = styled.section`
         height: 100%;
         width: 100vw;
     }
+    img{
+
+    }
 
 `
 
-const SlideBanner = () => {
+const SlideBannerSec = () => {
     /*
     //100vw and hidden overflow slider containing all slides defined in config.json
     //Beware: on bannersToLoad only fill imgUrl and href or styledComponent, otherwise the prefference will be for the styledComponent, ignoring imgUrl
@@ -33,7 +36,7 @@ const SlideBanner = () => {
         }
     ]
     return(
-        <StyledSlideBanner>
+        <StyledSlideBannerSec>
             <div className="slides">
                 {
                     bannersToLoad.map((banner) => {
@@ -53,7 +56,7 @@ const SlideBanner = () => {
                                     href={banner.imgHref} 
                                     className="slide"
                                 >
-                                    <img 
+                                    <img
                                         src={`${banner.imgSrc}`}
                                     />
                                 </a>
@@ -62,8 +65,8 @@ const SlideBanner = () => {
                     })
                 }
             </div>
-        </StyledSlideBanner>
+        </StyledSlideBannerSec>
     )
 }
 
-export default SlideBanner
+export default SlideBannerSec;

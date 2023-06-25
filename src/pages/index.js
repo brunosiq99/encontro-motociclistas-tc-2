@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import SlideBanner from '@/src/components/SlideBanner/SlideBanner';
 import Partners from '@/src/components/Partners/Partners';
-import Footer from '@/src/components/Footer/Footer';
 import Header from '@/src/components/Header/Header';
+import StandardFooter from '@/src/components/Footer/Footer';
+import SlideBannerSec from '@/src/components/SlideBanner/SlideBanner';
 const Home = ({config}) => {  
     return (
         <div>
             <Header key="HeaderInHome" config={config} />
             <main> 
-                <SlideBanner 
+                <SlideBannerSec 
                     key="SlideBannerInHome"
                 />
                 <Partners
@@ -16,7 +16,7 @@ const Home = ({config}) => {
                     partners={config.partners}
                 />
             </main>
-            <Footer 
+            <StandardFooter
                 key="FooterInHome" 
                 config={config}
             />           
