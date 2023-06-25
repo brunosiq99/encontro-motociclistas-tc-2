@@ -4,22 +4,24 @@ import Header from '@/src/components/Header/Header';
 import Footer from '@/src/components/Footer/Footer';
 import SlideBanner from '@/src/components/SlideBanner/SlideBanner';
 const Home = ({config,reloaded}) => {  
-    const recarregou = reloaded;
     return (
         <div>
             <Header key="HeaderInHome" config={config} />
             <main> 
                 <SlideBanner 
                     key="SlideBannerInHome"
+                    reloaded={reloaded}
                 />
                 <Partners
                     key="PartnersInHome"
                     partners={config.partners}
+                    reloaded={reloaded}
                 />
             </main>
             <Footer
                 key="FooterInHome" 
                 config={config}
+                reloaded={reloaded}
             />           
         </div>  
     )
