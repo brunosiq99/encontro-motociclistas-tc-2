@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import React from "react";
 
-const StyledStandardFooter = styled.footer`
+const StyledFooter = styled.footer`
     background-color: #030303;
     bottom: 0;
     width: 100vw;
@@ -17,9 +17,9 @@ const StyledStandardFooter = styled.footer`
     }
 `
 
-const StandardFooter = () => {
+const Footer = () => {
     return(
-        <StyledStandardFooter>
+        <StyledFooter>
             <div className="container footer__content ">
                 <ul>
 
@@ -29,7 +29,7 @@ const StandardFooter = () => {
 
                 </ul>
             </div>
-        </StyledStandardFooter>
+        </StyledFooter>
     )
 }
-export default StandardFooter;
+export default Footer;
