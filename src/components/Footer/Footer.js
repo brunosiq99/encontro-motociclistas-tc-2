@@ -17,14 +17,14 @@ const StyledFooter = styled.footer`
     }
 `
 
-const Footer = ({loaded,setLoaded}) => {
+const Footer = () => {
     return(
         <StyledFooter>
             <div className="container footer__content ">
                 <ul>
 
                 </ul>
-                <img className="footer__logo" src="https://www.encontromotociclistas.com.br/assets/Img/new-logo-23-white.png"/>
+                <img key="Footer_Logo" className="footer__logo" src="https://www.encontromotociclistas.com.br/assets/Img/new-logo-23-white.png"/>
                 <ul>
 
                 </ul>

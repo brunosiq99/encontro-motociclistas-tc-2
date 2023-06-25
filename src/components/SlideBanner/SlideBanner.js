@@ -17,15 +17,15 @@ const StyledSlideBanner = styled.section`
         height: 100%;
         width: 100vw;
     }
-    @media screen and (max-width: 640px) {
-    }
 
 `
 
 const SlideBanner = () => {
+    /*
     //100vw and hidden overflow slider containing all slides defined in config.json
     //Beware: on bannersToLoad only fill imgUrl and href or styledComponent, otherwise the prefference will be for the styledComponent, ignoring imgUrl
-    const bannersToLoad = [
+    */
+   const bannersToLoad = [
         {
             styledComp: <BannerOne />,
             imgSrc:"",
