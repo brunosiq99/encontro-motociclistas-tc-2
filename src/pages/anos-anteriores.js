@@ -3,7 +3,7 @@ import React from "react";
 import Header from "@/src/components/Header/Header";
 import { styled } from "styled-components";
 import Partners from "@/src/components/Partners/Partners";
-import StandardFooter from "@/src/components/Footer/Footer";
+import Footer from "@/src/components/Footer/Footer";
 
 // the old "Anos Anteriores" page was transcribed with the css styles
 // posteriorly it will be remade in react pattern 
@@ -196,7 +196,7 @@ const AnosAnteriores = ({config}) => {
             <Partners 
                 partners={config.partners}
             />
-            <StandardFooter config={config} />
+            <Footer config={config} />
         </StyledAnosAnteriores>
     )
 }
