@@ -24,7 +24,7 @@ const Footer = () => {
                 <ul>
 
                 </ul>
-                <img key="Footer_Logo" className="footer__logo" src="Img/banners/banner_divulgacao1.jpeg"/>
+                <img key="Footer_Logo" className="footer__logo" src="img/banners/banner_divulgacao1.jpeg"/>
                 <ul>
 
                 </ul>
