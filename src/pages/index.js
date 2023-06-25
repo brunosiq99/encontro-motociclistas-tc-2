@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Partners from '@/src/components/Partners/Partners';
 import Header from '@/src/components/Header/Header';
-import StandardFooter from '@/src/components/Footer/Footer';
+import Footer from '@/src/components/Footer/Footer';
 import SlideBannerSec from '@/src/components/SlideBanner/SlideBanner';
 const Home = ({config}) => {  
     return (
@@ -16,7 +16,7 @@ const Home = ({config}) => {
                     partners={config.partners}
                 />
             </main>
-            <StandardFooter
+            <Footer
                 key="FooterInHome" 
                 config={config}
             />           
