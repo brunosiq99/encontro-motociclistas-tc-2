@@ -15,9 +15,9 @@ const StyledPatrocinadores = styled.div`
     }
     .slides{
         align-items: center;
-        /*animation: scrollPatrocionio backwards infinite;
+        animation: scrollPatrocionio backwards infinite;
         animation-duration: 8s;
-        animation-timing-function: linear;*/
+        animation-timing-function: linear;
         display: grid;
         grid-template-columns: repeat(${({patrocinadorescount}) => patrocinadorescount}, 20% );
         width: ${({slidesWidth}) => slidesWidth};
@@ -33,7 +33,7 @@ const StyledPatrocinadores = styled.div`
     @media screen and (min-width: 640px){
         width: calc(100vw - 10rem);
         .slides{
-            /*animation: none;*/
+            animation: none;
             grid-template-columns: repeat(${({patrocinadorescount}) => patrocinadorescount}, 12.5%);
         }
     }
