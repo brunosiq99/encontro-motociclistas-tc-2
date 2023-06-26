@@ -33,7 +33,7 @@ const StyledBannerOne = styled.div`
         left: calc(50% - 0.875rem)
     }
     .banner__logo{
-        max-width: 80vw
+        max-width: 80vw;
         width: 22.5rem;
     }
     .banner__date-and-local p{
@@ -50,7 +50,7 @@ const StyledBannerOne = styled.div`
         }
         .banner__logo{
         width: 27.5rem
-    }
+        }
 `
 
 const BannerOne = () => {
