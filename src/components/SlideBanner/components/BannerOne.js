@@ -26,8 +26,7 @@ const StyledBannerOne = styled.div`
     .banner__content p{
         font-family: "Kawit Free", cursive;
         font-size: 2rem;
-        position: absolute;
-        left: calc(50% - 0.875rem)
+        text-align: center;
     }
     .banner__logo{
         max-width: 80vw;
