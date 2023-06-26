@@ -28,6 +28,14 @@ const StyledBannerOne = styled.div`
         font-size: 2rem;
         text-align: center;
     }
+    .banner__apresentation{
+        align-itens: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .banner_apresentation p{
+        margin-bottom:0.5rem
+    }
     .banner__logo{
         max-width: 80vw;
         width: 22.5rem;
@@ -53,15 +61,17 @@ const BannerOne = () => {
     return(
         <StyledBannerOne>
             <div className="banner__content">
-                <p>
-                    VI
-                </p>
-                <img 
-                    key="BannerOne_Img"
-                    src="pageAnosAnteriores/assets/Img/new-logo-23-white.png"
-                    className="banner__logo"
-                    alt="Encontro Nacional de Motociclistas e Triciclistas de Três Corações, Minas Gerais"
-                />
+                <div className="banner_apresentation">
+                    <p>
+                        VI
+                    </p>
+                    <img 
+                        key="BannerOne_Img"
+                        src="pageAnosAnteriores/assets/Img/new-logo-23-white.png"
+                        className="banner__logo"
+                        alt="Encontro Nacional de Motociclistas e Triciclistas de Três Corações, Minas Gerais"
+                    />
+                </div>
                 <div className="banner__date-and-local">
                     <p>Dias 11, 12 e 13 de Agosto</p>
                     <p>Parque Dondinho - Av. Quinto Centenário</p>
