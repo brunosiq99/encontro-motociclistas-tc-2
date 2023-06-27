@@ -1,9 +1,10 @@
 import React from 'react';
-import Partners from '@/src/components/Partners/Partners';
-import Header from '@/src/components/Header/Header';
-import Footer from '@/src/components/Footer/Footer';
-import SlideBanner from '@/src/components/SlideBanner/SlideBanner';
+import Partners from '@/src/components/Partners';
+import Header from '@/src/components/Header';
+import Footer from '@/src/components/Footer';
+import SlideBanner from '@/src/components/SlideBanner';
 import Head from 'next/head';
+import Bandas from '../components/Bandas';
 const Home = ({config}) => {  
     return (
         <div>
@@ -21,6 +22,9 @@ const Home = ({config}) => {
                 <SlideBanner 
                     key="SlideBannerInHome"
 
+                />
+                <Bandas 
+                    bands={config.bands}
                 />
                 <Partners
                     key="PartnersInHome"

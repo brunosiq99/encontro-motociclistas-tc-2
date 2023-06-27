@@ -1,9 +1,9 @@
 
 import React from "react";
-import Header from "@/src/components/Header/Header";
+import Header from "@/src/components/Header";
 import { styled } from "styled-components";
-import Partners from "@/src/components/Partners/Partners";
-import Footer from "@/src/components/Footer/Footer";
+import Partners from "@/src/components/Partners";
+import Footer from "@/src/components/Footer";
 
 // the old "Anos Anteriores" page was transcribed with the css styles
 // posteriorly it will be remade in react pattern 

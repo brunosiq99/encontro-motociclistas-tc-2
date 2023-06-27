@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
 const Styles = createGlobalStyle`
      
@@ -18,6 +18,17 @@ const Styles = createGlobalStyle`
         font-family: "Montserrat", sans-serif;
         font-weight: 400;
     }
+
+    // styles
+    .section__titleh2{
+        color: #000;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: 500;
+        text-shadow: 1px 1px 2px #000; 
+    }
+
     
 `;
 

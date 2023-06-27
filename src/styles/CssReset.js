@@ -38,9 +38,7 @@ const CssReset = createGlobalStyle`
 	  opacity: .5;
 	}
   }
-
-
-
+  
 
   /* Container */
   .container{
@@ -56,6 +54,21 @@ const CssReset = createGlobalStyle`
     body{
         font-family: "Montserrat", sans-serif;
         font-weight: 400;
+    }
+
+    /*Styles*/
+    .regular-section{
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    .section__titleh2{
+        color: #000;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        text-shadow: 1px 1px 2px #000; 
     }
 `;
 

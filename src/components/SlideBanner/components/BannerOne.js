@@ -23,26 +23,22 @@ const StyledBannerOne = styled.div`
         padding: 2rem 0;
         width: 100%;
     }
-    .banner__content p{
+    .banner__apresentation{
+
+    }
+    .banner__apresentation p{
         font-family: "Kawit Free", cursive;
         font-size: 2rem;
-        text-align: center;
-    }
-    .banner__apresentation{
-        align-itens: center;
-        display: flex;
-        flex-direction: column;
-    }
-    .banner_apresentation p{
-        margin-bottom:0.5rem
+        margin-bottom: -2rem;
+        text-align: center
     }
     .banner__logo{
-        max-width: 80vw;
-        width: 22.5rem;
+        max-height: 70vh;
+        width: 20rem;
     }
     .banner__date-and-local p{
         font-weight: 400;
-        font-size: 1.15rem;
+        font-size: 1.0rem;
         text-transform: uppercase;
     }
     div{
@@ -53,15 +49,19 @@ const StyledBannerOne = styled.div`
             font-size: 1.75rem;
         }
         .banner__logo{
-        width: 27.5rem
+            width: 27.5rem;
         }
+        .banner__date-and-local p{
+            font-size: 1.25rem;
+        }
+    }
 `
 
 const BannerOne = () => {
     return(
         <StyledBannerOne>
             <div className="banner__content">
-                <div className="banner_apresentation">
+                <div className="banner__apresentation">
                     <p>
                         VI
                     </p>
