@@ -13,6 +13,7 @@ const StyledBandas = styled.section`
         aspect-ratio: 5/6;
         background-color: orange;
         border-radius: 5px;
+        margin: 0.75rem;
         overflow: hidden;
         width: 260px;
     }
@@ -58,6 +59,9 @@ const StyledBandas = styled.section`
         .band-banner:hover{
             filter: opacity(1);
             transform: scale(1.1);
+        }
+        .back-misterious{
+            width: 260px;
         }
     }
 

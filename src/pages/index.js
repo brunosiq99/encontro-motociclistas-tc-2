@@ -5,6 +5,7 @@ import Footer from '@/src/components/Footer';
 import SlideBanner from '@/src/components/SlideBanner';
 import Head from 'next/head';
 import Bandas from '../components/Bandas';
+import ComoChegar from '../components/ComoChegar';
 const Home = ({config}) => {  
     return (
         <div>
@@ -25,6 +26,8 @@ const Home = ({config}) => {
                 />
                 <Bandas 
                     bands={config.bands}
+                />
+                <ComoChegar
                 />
                 <Partners
                     key="PartnersInHome"
