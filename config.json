@@ -50,6 +50,24 @@
             },{
                 "name":"Auto Center WS Rodas",
                 "imgFile":"ws-rodas.jpeg"
+            },{
+                "name":"Trectur",
+                "imgFile":"trectur.jfif"
+            },{
+                "name":"Ferragens Três Corações",
+                "imgFile":"ferragens-tc.jpeg"
+            },{
+                "name":"Chopperia Vila Alemã",
+                "imgFile":"vila-alema.png"
+            },{
+                "name":"Kremer",
+                "imgFile":"kremer.png"
+            },{
+                "name":"Pizza da Bia",
+                "imgFile":"pizza-da-bia.jpeg"
+            },{
+                "name":"Dogão da Xeninha",
+                "imgFile":"dogao-da-xeninha.jpeg"
             }
         ]
     },

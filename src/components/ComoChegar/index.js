@@ -2,9 +2,13 @@ import React from "react";
 import { styled } from "styled-components";
 
 const StyledComoChegar = styled.section`
+    text-align: center;
     .maps{
-       width: 100%;
+        max-height: 60vh;
+        max-width: 680px;
+        width: 100%;
     }
+    
 `
 const ComoChegar = () => {
     return(

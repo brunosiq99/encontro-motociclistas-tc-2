@@ -15,11 +15,11 @@ const StyledPatrocinadores = styled.div`
     }
     .slides{
         align-items: center;
-        animation: scrollPatrocionio backwards infinite;
-        animation-duration: 8s;
-        animation-timing-function: linear;
+        animation: scrollPatrocinio4steps infinite;
+        animation-duration: 20s;    //Indication: 5s by step
+       
         display: grid;
-        grid-template-columns: repeat(${({patrocinadorescount}) => patrocinadorescount}, 20% );
+        grid-template-columns: repeat(${({patrocinadorescount}) => patrocinadorescount}, 25% );
         width: ${({slidesWidth}) => slidesWidth};
     }
     .slide{
@@ -33,29 +33,66 @@ const StyledPatrocinadores = styled.div`
     @media screen and (min-width: 640px){
         width: calc(100vw - 10rem);
         .slides{
-            animation: none;
+            animation: scrollPatrocinio2steps infinite;
+            animation-duration: 10s; //Indication: 5s by step
             grid-template-columns: repeat(${({patrocinadorescount}) => patrocinadorescount}, 12.5%);
         }
     }
     //
 
-
-    @keyframes scrollPatrocionio{
-        
+    // INDICATED: 
+    @keyframes scrollPatrocinio2steps{     
         0% {
             transform: translateX(0);
         }
-        45% {
+        48% {
             transform: translateX(0);
+        }
+        52% {
+            transform: translateX(-100%);
+        }
+        99%{
+            transform: translateX(-100%);
+        }
+    }
+    @keyframes scrollPatrocinio3steps{     
+        32% {
+            transform: translateX(0);
+        }
+        34% {
+            transform: translateX(-100%);
+        }
+        66% {
+            transform: translateX(-100%);
+        }
+        67% {
+            transform: translateX(-200%);
+        }
+        99% {
+            transform: translateX(-200%);
+        }
+    }
+    @keyframes scrollPatrocinio4steps{     
+        24% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-100%);
+        }
+        49% {
+            transform: translateX(-100%);
         }
         50% {
-            transform: translateX(-100%);
+            transform: translateX(-200%);
         }
-        95% {
-            transform: translateX(-100%);
+        74% {
+            transform: translateX(-200%);
         }
-        100% {
-            transform: translateX(0);
+        75% {
+            transform: translateX(-300%);
+        }
+        99% {
+            transform: translateX(-300%);
         }
     }
 `
