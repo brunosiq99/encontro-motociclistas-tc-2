@@ -36,26 +36,32 @@
                 "name":"Paddock",
                 "imgFile":"paddock.jpeg"
             },{
-                "name":"Loja Zuza",
-                "imgFile":"loja-zuza.png"
+                "name":"Terremoto Motopeças",
+                "imgFile":"terremoto.jpeg"
+            },{
+                "name":"Bolota Motopeças",
+                "imgFile":"bolota.jpg"
             },{
                 "name":"Scap Centro Automotivo",
                 "imgFile":"scap.png"
             },{
-                "name":"Ótica Real",
-                "imgFile":"otica-real.jpeg"
-            },{
-                "name":"Terremoto Moto Peças",
-                "imgFile":"terremoto.jpeg"
-            },{
                 "name":"Auto Center WS Rodas",
                 "imgFile":"ws-rodas.jpeg"
+            },{
+                "name":"Loja Zuza",
+                "imgFile":"loja-zuza.png"
+            },{
+                "name":"Ótica Real",
+                "imgFile":"otica-real.jpeg"
             },{
                 "name":"Trectur",
                 "imgFile":"trectur.jfif"
             },{
                 "name":"Ferragens Três Corações",
                 "imgFile":"ferragens-tc.jpeg"
+            },{
+                "name":"Anderson Despachante",
+                "imgFile":"anderson-despachante.jpeg"
             },{
                 "name":"Chopperia Vila Alemã",
                 "imgFile":"vila-alema.png"
