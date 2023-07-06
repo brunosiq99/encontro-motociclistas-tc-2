@@ -31,7 +31,7 @@ const StyledEstruturaEvento = styled.section`
         }
         .img-dondinho{
             aspect-ratio: unset;
-            background-image: url('img/general/foto-aerea-dondinho.jpg');
+            background-image: url('img/general/foto-aerea-dondinho.png');
             background-size: cover;
             background-position: center;
             height: 100%;
