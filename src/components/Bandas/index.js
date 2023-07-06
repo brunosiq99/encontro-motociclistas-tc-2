@@ -5,7 +5,7 @@ const StyledBandas = styled.section`
     .bands-flex{
         align-items: center;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         flex-wrap: wrap;
         row-gap: 1rem;
     }
@@ -46,22 +46,23 @@ const StyledBandas = styled.section`
         width: 80%;
     }
     @media screen and (min-width: 560px){
-        .bands-flex{
-            justify-content: space-around;
-        } 
+        .back-orange{
+            width: 220px;
+        }
     }
-    @media screen and (min-width: 720px){     
+    @media screen and (min-width: 720px){  
+        .bands-flex{
+            
+        }    
         .band-banner{
 
             filter: opacity(0.7);
             transition: 0.5s;
         }
+        
         .band-banner:hover{
             filter: opacity(1);
             transform: scale(1.1);
-        }
-        .back-misterious{
-            width: 260px;
         }
     }
 
