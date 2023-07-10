@@ -10,7 +10,7 @@ const StyledBandas = styled.section`
         row-gap: 1rem;
     }
     .back-orange{
-        aspect-ratio: 5/6;
+        aspect-ratio: 7/8;
         background-color: orange;
         border-radius: 5px;
         margin: 0.75rem;
@@ -27,7 +27,7 @@ const StyledBandas = styled.section`
     .band-banner p{
         background-color: orange;
         bottom: 20px;
-        font-size: 1.25rem;
+        font-size: 1rem;
         font-weight: 800;
         margin-left: 15%;
         margin-right: 15%;
@@ -55,7 +55,6 @@ const StyledBandas = styled.section`
             
         }    
         .band-banner{
-
             filter: opacity(0.7);
             transition: 0.5s;
         }
@@ -74,7 +73,7 @@ const Bandas = ({bands}) => {
         <StyledBandas
             className="container regular-section"
         >
-            <h2 className="section__titleh2">Bandas</h2>
+            <h2 className="section__titleh2">Atrações</h2>
             <div className="bands-flex">
                 {
                     bands.map((band) => {
