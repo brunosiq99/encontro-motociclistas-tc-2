@@ -63,6 +63,9 @@
                 "name":"Anderson Despachante",
                 "imgFile":"anderson-despachante.jpeg"
             },{
+                "name":"Adega São João",
+                "imgFile":"adega-sao-joao.jpeg"
+            },{
                 "name":"Chopperia Vila Alemã",
                 "imgFile":"vila-alema.png"
             },{
@@ -99,35 +102,50 @@
             "instagram":"",
             "youtube":""
         },{
-            "name":"",
-            "img":"who.png",
+            "name":"Le Cambada",
+            "img":"le-cambada.png",
             "instagram":"",
             "youtube":""
         },{
-            "name":"",
-            "img":"who.png",
+            "name":"Mil Contra",
+            "img":"mil-contra.png",
             "instagram":"",
             "youtube":""
         },{
-            "name":"",
-            "img":"who.png",
+            "name":"Pé na Estrada",
+            "img":"pe-na-estrada.png",
             "instagram":"",
             "youtube":""
         },{
-            "name":"",
-            "img":"who.png",
+            "name":"Excellence",
+            "img":"excellence.png",
             "instagram":"",
             "youtube":""
         },{
-            "name":"",
-            "img":"who.png",
+            "name":"Armação Ilimitada",
+            "img":"armacao-ilimitada.png",
             "instagram":"",
             "youtube":""
         },{
-            "name":"",
-            "img":"who.png",
+            "name":"Turbo Rock",
+            "img":"turbo-rock.png",
             "instagram":"",
             "youtube":""
-        } 
+        },{
+            "name":"Black Wolf",
+            "img":"black-wolf.jpg",
+            "instagram":"",
+            "youtube":""
+        },{
+            "name":"Félix Jackson",
+            "img":"felix-jackson.png",
+            "instagram":"",
+            "youtube":""
+        },{
+            "name":"Magno Alves Locutor",
+            "img":"magno-locutor.jpeg",
+            "instagram":"",
+            "youtube":""
+        }
     ]
 }
